@@ -64,7 +64,7 @@ class TaskReadView(LoginRequiredMixin, ListView):
         user = self.request.user
         if title:
             object_list = self.model.objects.filter(
-                Q(title__icontains=title) | Q(tags__icontains=title)
+                Q(title__icontains=title) | Q(tags__icontains=title), user_id=user
             )
         else:
             object_list = self.model.objects.filter(user_id=user)
