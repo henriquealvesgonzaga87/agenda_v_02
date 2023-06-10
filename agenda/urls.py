@@ -1,5 +1,5 @@
 """
-URL configuration for agenda project.
+URL configuration for task project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -15,8 +15,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.views.generic import TemplateView
+from django.contrib.auth.decorators import login_required
+from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("", login_required(TemplateView.as_view(template_name="index.html")), name="index"),
+    path("accounts/login/", views.login, name="login"),
+    path("logout/", views.logout, name="logout"),
+    path("accounts/login/submit", views.submit_login, name="submit_login"),
+    path("user/", include("client.urls")),
 ]
