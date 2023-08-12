@@ -57,7 +57,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-If you have any questions or need assistance, feel free to contact the project owner, Henrique Alves Gonzaga, at henrique@example.com.
+If you have any questions or need assistance, feel free to contact the project owner, Henrique Gonzaga, at henriquealves87@hotmail.com
 
 Happy task managing!
-```
