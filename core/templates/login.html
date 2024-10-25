@@ -25,7 +25,8 @@
       <div class="main">
          <div class="col-md-6 col-sm-12">
             <div class="login-form">
-               <form action="submit", method="POST">{% csrf_token %}
+               <form action="submit", method="POST">
+                {% csrf_token %}
                   <div class="form-group">
                      <label>User</label>
                      <input type="text" class="form-control" placeholder="User" name="username">
