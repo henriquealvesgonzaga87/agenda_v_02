@@ -26,12 +26,12 @@ To get started with the Agenda App, follow these steps:
 
 3. Install the required dependencies:
    ```bash
-   npm install
+   pip install -r requirements.txt
    ```
 
 4. Start the app:
    ```bash
-   npm start
+   python manage.py runserver
    ```
 
 ## Usage
